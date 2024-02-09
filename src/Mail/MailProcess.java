@@ -1,3 +1,5 @@
+package Mail;
+
 public class MailProcess {
     public boolean login(MailLogin details){
         String myMail = "reddy@gmail.com";
