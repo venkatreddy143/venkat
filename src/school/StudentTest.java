@@ -1,9 +1,5 @@
 package school;
 
-import Intrest.AmountGive;
-
-import java.util.SortedMap;
-
 public class StudentTest {
     String getRollNo(Student abc){
 
