@@ -1,6 +1,7 @@
 
 public enum CheckedException {
-    exception_401("Invalid Credentials","exception_401");
+    exception_401("Invalid Credentials","exception_401"),
+    exception_402("Invalid OTP","exception_402");
     String message;
     String errorCode;
 
