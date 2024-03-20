@@ -1,3 +1,5 @@
+package bookmyshow;
+
 public class BookMyShow {
     public String userId;
     public String password;
@@ -6,7 +8,6 @@ public class BookMyShow {
         this.userId = userId;
         this.password = password;
     }
-
     public String getUserId() {
         return userId;
     }
