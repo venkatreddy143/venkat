@@ -16,10 +16,10 @@ public class Vehicle extends Thread {
     public void run(){
         if (type.equals("petrol")){
             System.out.println(Thread.currentThread().getName());
-            petrolStation.petrol(Thread.currentThread().getName(), this.liters);
+            petrolStation.petrolBlock(Thread.currentThread().getName(), this.liters);
         }else{
             System.out.println(Thread.currentThread().getName());
-            petrolStation.diesel(Thread.currentThread().getName(), this.liters);
+            petrolStation.dieselBlock(Thread.currentThread().getName(), this.liters);
         }
     }
 }

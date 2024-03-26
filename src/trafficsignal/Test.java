@@ -1,24 +1,30 @@
 package trafficsignal;
 public class Test {
     public static void main(String[] args) {
-        TrafficSignal signal = new TrafficSignal();
-        TrafficController controller = new TrafficController(signal);
-        Thread controllerThread = new Thread(controller);
-        controllerThread.start();
+        Crossroad crossroad = new Crossroad();
 
         for (int i = 0; i < 5; i++) {
-            Thread carThread = new Thread(() -> {
-                while (true) {
-                    signal.stop();
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    signal.waitForSignalChange();
-                }
-            });
-            carThread.start();
+            Vehicle northVehicle = new Vehicle("North-South", crossroad);
+            Vehicle eastVehicle = new Vehicle("East-West", crossroad);
+            Vehicle westVehicle = new Vehicle("West-East", crossroad);
+            Vehicle southVehicle = new Vehicle("South-North", crossroad);
+
+            northVehicle.start();
+            eastVehicle.start();
+            westVehicle.start();
+            southVehicle.start();
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+            }
+            crossroad.changeSignal();
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+
+            }
         }
     }
 }
