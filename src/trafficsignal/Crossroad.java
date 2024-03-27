@@ -19,7 +19,8 @@ class Crossroad {
             } catch (InterruptedException e) {
             }
         }
-        System.out.println("Vehicle moving North-South");
+        System.out.println("Green Signal : Vehicle moving North-South");
+        System.out.println("Red Signal : Other Side Vehicles Was Stopped");
     }
     synchronized void allowEastWest() {
         while (!isEastWestSignalGreen) {
@@ -28,7 +29,8 @@ class Crossroad {
             } catch (InterruptedException e) {
             }
         }
-        System.out.println("Vehicle moving East-West");
+        System.out.println("Green Signal : Vehicle moving East-West");
+        System.out.println("Red Signal : Other Side Vehicles Was Stopped");
     }
     synchronized void allowWestEast() {
         while (!isWestEastSignalGreen) {
@@ -37,7 +39,8 @@ class Crossroad {
             } catch (InterruptedException e) {
             }
         }
-        System.out.println("Vehicle moving West-East");
+        System.out.println("Green Signal : Vehicle moving West-East");
+        System.out.println("Red Signal : Other Side Vehicles Was Stopped");
     }
     synchronized void allowSouthNorth() {
         while (!isSouthNorthSignalGreen) {
@@ -46,7 +49,8 @@ class Crossroad {
             } catch (InterruptedException e) {
             }
         }
-        System.out.println("Vehicle moving South-North");
+        System.out.println("Green Signal : Vehicle moving South-North");
+        System.out.println("Red Signal : Other Side Vehicles Was Stopped");
     }
     synchronized void changeSignal() {
         if (isNorthSouthSignalGreen) {

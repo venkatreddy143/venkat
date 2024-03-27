@@ -14,24 +14,24 @@ public class Test {
         southVehicle.start();
 
         try {
-            Thread.sleep(20000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         crossroad.changeSignal();
 
         try {
-            Thread.sleep(20000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         crossroad.changeSignal();
 
         try {
-            Thread.sleep(20000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         crossroad.changeSignal();
         try {
-            Thread.sleep(20000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         crossroad.changeSignal();
