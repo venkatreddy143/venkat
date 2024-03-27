@@ -12,29 +12,24 @@ class Crossroad {
         isWestEastSignalGreen = false;
         isSouthNorthSignalGreen = false;
     }
-
     synchronized void allowNorthSouth() {
         while (!isNorthSouthSignalGreen) {
             try {
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         }
         System.out.println("Vehicle moving North-South");
     }
-
     synchronized void allowEastWest() {
         while (!isEastWestSignalGreen) {
             try {
                 wait();
             } catch (InterruptedException e) {
-
             }
         }
         System.out.println("Vehicle moving East-West");
     }
-
     synchronized void allowWestEast() {
         while (!isWestEastSignalGreen) {
             try {
@@ -44,7 +39,6 @@ class Crossroad {
         }
         System.out.println("Vehicle moving West-East");
     }
-
     synchronized void allowSouthNorth() {
         while (!isSouthNorthSignalGreen) {
             try {
@@ -54,7 +48,6 @@ class Crossroad {
         }
         System.out.println("Vehicle moving South-North");
     }
-
     synchronized void changeSignal() {
         if (isNorthSouthSignalGreen) {
             isNorthSouthSignalGreen = false;
